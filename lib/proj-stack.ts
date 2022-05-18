@@ -25,6 +25,7 @@ export class ProjStack extends cdk.Stack {
         commands: [
           'npm ci',
           'npm run build',
+          'npx cdk --version',
           'npx cdk synth --debug --verbose --trace'
         ]
       })
