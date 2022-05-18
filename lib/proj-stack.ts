@@ -20,7 +20,7 @@ export class ProjStack extends cdk.Stack {
       synth: new pipelines.CodeBuildStep('SynthStep', {
         input: connection,
         installCommands: [
-          'npm install -g aws-cdk'
+          'npm install -g aws-cdk@1'
         ],
         commands: [
           'npm ci',
