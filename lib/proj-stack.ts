@@ -30,7 +30,12 @@ export class ProjStack extends cdk.Stack {
       })
     });
 
-    const stage = new MyStage(this, 'MyStage', {});
+    const stage = new MyStage(this, 'MyStage', {
+      env: {
+        account: '393007915094',
+        region: 'ap-northeast-1'
+      }
+    });
     pipeline.addStage(stage)
 
     // The code that defines your stack goes here
